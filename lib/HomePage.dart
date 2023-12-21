@@ -12,6 +12,9 @@ class _HomePageState extends State<HomePage>
   PageController _pageController = PageController();
   int _currentPage = 0;
 
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
@@ -61,7 +64,9 @@ class _HomePageState extends State<HomePage>
                 hintStyle: TextStyle(color: Colors.white),
                 suffixIcon: IconButton(
                   icon: Icon(Icons.clear, color: Colors.white),
-                  onPressed: () {},
+                  onPressed: () {
+                    _usernameController.clear();
+                  },
                 ),
               ),
             ),
@@ -74,7 +79,9 @@ class _HomePageState extends State<HomePage>
                 hintStyle: TextStyle(color: Colors.white),
                 suffixIcon: IconButton(
                   icon: Icon(Icons.clear, color: Colors.white),
-                  onPressed: () {},
+                  onPressed: () {
+                    _passwordController.clear();
+                  },
                 ),
               ),
             ),
